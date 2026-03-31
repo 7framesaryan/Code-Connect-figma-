@@ -1,0 +1,45 @@
+<div class="page-layout">
+  <app-sidebar></app-sidebar>
+
+  <main class="main">
+    <div class="topbar">
+      <div class="greeting">
+        <h2 class="greeting-title">Good morning, Aryan</h2>
+        <p class="greeting-sub">Here is what is happening with your projects</p>
+      </div>
+      <div class="spacer"></div>
+      <app-avatar initials="AR"></app-avatar>
+    </div>
+
+    <div class="content">
+      <!-- Stats -->
+      <div class="stats">
+        @for (stat of stats; track stat.label) {
+          <div class="stat-card">
+            <span class="stat-label">{{ stat.label }}</span>
+            <span class="stat-value">{{ stat.value }}</span>
+            <span class="stat-change" [class.stat-change--negative]="!stat.positive">
+              {{ stat.change }}
+            </span>
+          </div>
+        }
+      </div>
+
+      <h3 class="section-title">Recent Projects</h3>
+
+      <!-- Project Cards -->
+      <div class="projects">
+        @for (project of projects; track project.title) {
+          <div class="project-card">
+            <div class="project-thumb"></div>
+            <div class="project-content">
+              <div class="badge">{{ project.badge }}</div>
+              <h4 class="project-title">{{ project.title }}</h4>
+              <p class="project-desc">{{ project.desc }}</p>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </main>
+</div>

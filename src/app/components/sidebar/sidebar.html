@@ -1,0 +1,32 @@
+<aside class="sidebar">
+  <div class="logo">
+    <div class="logo-dot"></div>
+    <span class="logo-text">Pulse</span>
+  </div>
+
+  <nav class="nav">
+    @for (item of navItems; track item.label) {
+      <a
+        class="nav-item"
+        [routerLink]="item.route"
+        routerLinkActive="nav-item--active"
+      >
+        {{ item.label }}
+      </a>
+    }
+  </nav>
+
+  <div class="spacer"></div>
+
+  <nav class="nav bottom-nav">
+    @for (item of bottomItems; track item.label) {
+      <a
+        class="nav-item"
+        [routerLink]="item.route"
+        routerLinkActive="nav-item--active"
+      >
+        {{ item.label }}
+      </a>
+    }
+  </nav>
+</aside>

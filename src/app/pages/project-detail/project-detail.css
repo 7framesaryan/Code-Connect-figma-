@@ -1,0 +1,155 @@
+.page-layout {
+  display: flex;
+  height: 100vh;
+  background: var(--neutral-950);
+  overflow: hidden;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-primary);
+  height: 100%;
+  overflow-y: auto;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-16);
+  padding: var(--sp-24) var(--sp-32);
+}
+
+.title-row {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-12);
+}
+
+.page-title {
+  font-size: var(--fs-h4);
+  font-weight: 600;
+  line-height: var(--lh-h4);
+  color: var(--text-primary);
+}
+
+.badge {
+  display: inline-flex;
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-size: var(--fs-overline);
+  font-weight: 500;
+  line-height: var(--lh-overline);
+}
+
+.badge--accent {
+  background: var(--accent);
+  color: var(--bg-primary);
+}
+
+.spacer {
+  flex: 1;
+}
+
+.btn-primary-sm {
+  height: 40px;
+  padding: 0 var(--sp-16);
+  background: var(--accent);
+  border: none;
+  border-radius: var(--radius-md);
+  font-family: 'Inter', sans-serif;
+  font-size: var(--fs-body-sm);
+  font-weight: 500;
+  line-height: var(--lh-body-sm);
+  color: var(--bg-primary);
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+.btn-primary-sm:hover {
+  opacity: 0.9;
+}
+
+.page-desc {
+  font-size: var(--fs-body-sm);
+  line-height: var(--lh-body-sm);
+  color: var(--text-muted);
+}
+
+.team-avatars {
+  display: flex;
+  padding-right: 8px;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background: var(--border-subtle);
+}
+
+.tasks {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.task-row {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-12);
+  padding: var(--sp-12) var(--sp-32);
+}
+
+.task-row--done {
+  opacity: 0.5;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.checkbox {
+  width: 20px;
+  height: 20px;
+  border: 1.5px solid var(--neutral-700);
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.checkbox--checked {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.task-label {
+  font-size: var(--fs-body-sm);
+  line-height: var(--lh-body);
+  color: var(--text-secondary);
+}
+
+.priority-badge {
+  display: inline-flex;
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-size: var(--fs-overline);
+  font-weight: 500;
+  line-height: var(--lh-overline);
+}
+
+.priority--red {
+  background: var(--destructive);
+  color: var(--neutral-50);
+}
+
+.priority--yellow {
+  background: var(--warning);
+  color: var(--bg-primary);
+}
+
+.priority--green {
+  background: var(--success);
+  color: var(--neutral-50);
+}

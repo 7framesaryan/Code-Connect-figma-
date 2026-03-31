@@ -1,0 +1,29 @@
+.toggle {
+  width: 44px;
+  height: 24px;
+  border-radius: 12px;
+  background: var(--border-default);
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.2s;
+  flex-shrink: 0;
+}
+
+.toggle--on {
+  background: var(--accent);
+  justify-content: flex-end;
+}
+
+.toggle-knob {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background: var(--text-muted);
+  transition: background 0.2s;
+}
+
+.toggle--on .toggle-knob {
+  background: var(--neutral-50);
+}

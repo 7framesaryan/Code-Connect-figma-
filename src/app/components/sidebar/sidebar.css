@@ -1,0 +1,68 @@
+.sidebar {
+  width: 240px;
+  height: 100%;
+  background: var(--bg-primary);
+  border-right: 1px solid var(--neutral-900);
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-8);
+  padding: var(--sp-24);
+}
+
+.logo-dot {
+  width: 10px;
+  height: 10px;
+  background: var(--accent);
+  border-radius: 5px;
+}
+
+.logo-text {
+  font-size: var(--fs-body-lg);
+  font-weight: 700;
+  line-height: var(--lh-body);
+  color: var(--text-primary);
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+  padding: var(--sp-16);
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  padding: var(--sp-8) var(--sp-12);
+  border-radius: var(--radius-md);
+  font-size: var(--fs-body-sm);
+  line-height: var(--lh-body);
+  color: var(--text-tertiary);
+  font-weight: 400;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.nav-item:hover {
+  background: var(--bg-secondary);
+}
+
+.nav-item--active {
+  background: var(--bg-secondary);
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.bottom-nav {
+  padding: var(--sp-16);
+}

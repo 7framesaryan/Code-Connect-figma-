@@ -1,0 +1,44 @@
+<div class="page-layout">
+  <app-sidebar></app-sidebar>
+
+  <main class="main">
+    <div class="header">
+      <div class="title-row">
+        <h1 class="page-title">Website Redesign</h1>
+        <div class="badge badge--accent">In Progress</div>
+        <div class="spacer"></div>
+        <button class="btn-primary-sm">+ Add Task</button>
+      </div>
+      <p class="page-desc">Landing page redesign with new branding, hero section, and blog integration</p>
+      <div class="team-avatars">
+        @for (member of teamMembers; track $index) {
+          <app-avatar [initials]="member" [bordered]="true"></app-avatar>
+        }
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="tasks">
+      @for (task of tasks; track task.label) {
+        <div class="task-row" [class.task-row--done]="task.done">
+          <div class="checkbox-group">
+            <div class="checkbox" [class.checkbox--checked]="task.done"></div>
+            <span class="task-label">{{ task.label }}</span>
+          </div>
+          <div class="spacer"></div>
+          <div
+            class="priority-badge"
+            [class.priority--red]="task.priorityColor === 'red'"
+            [class.priority--yellow]="task.priorityColor === 'yellow'"
+            [class.priority--green]="task.priorityColor === 'green'"
+          >
+            {{ task.priority }}
+          </div>
+          <app-avatar initials="AR"></app-avatar>
+        </div>
+        <div class="divider"></div>
+      }
+    </div>
+  </main>
+</div>

@@ -1,0 +1,70 @@
+<div class="page-layout">
+  <app-sidebar></app-sidebar>
+
+  <main class="main">
+    <div class="topbar">
+      <h1 class="page-title">Settings</h1>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="scroll-content">
+      <!-- Profile Section -->
+      <section class="section">
+        <div class="profile-head">
+          <app-avatar initials="SK" size="lg" color="gold"></app-avatar>
+          <div class="profile-info">
+            <h3 class="profile-name">Aryan Rana</h3>
+            <p class="profile-email">aryan&#64;pulse.app</p>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="input-group">
+            <label class="label">Full Name</label>
+            <div class="field">
+              <input type="text" class="input" [(ngModel)]="fullName" />
+            </div>
+          </div>
+          <div class="input-group">
+            <label class="label">Email</label>
+            <div class="field">
+              <input type="email" class="input" [(ngModel)]="email" />
+            </div>
+          </div>
+        </div>
+
+        <div class="save-row">
+          <button class="btn-primary-sm">Save Changes</button>
+          <button class="btn-outline">Cancel</button>
+        </div>
+      </section>
+
+      <div class="divider"></div>
+
+      <!-- Notifications -->
+      <section class="section">
+        <h3 class="section-title">Notifications</h3>
+
+        @for (item of notifications; track item.label) {
+          <div class="toggle-row">
+            <div class="toggle-info">
+              <span class="toggle-label">{{ item.label }}</span>
+              <span class="toggle-desc">{{ item.desc }}</span>
+            </div>
+            <app-toggle [(checked)]="item.checked"></app-toggle>
+          </div>
+        }
+      </section>
+
+      <div class="divider"></div>
+
+      <!-- Danger Zone -->
+      <section class="section">
+        <h3 class="section-title section-title--danger">Danger Zone</h3>
+        <p class="danger-desc">Permanently delete your account and all associated data.</p>
+        <button class="btn-danger">Delete Account</button>
+      </section>
+    </div>
+  </main>
+</div>

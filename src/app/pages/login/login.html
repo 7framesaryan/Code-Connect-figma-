@@ -1,0 +1,39 @@
+<div class="login-page">
+  <div class="login-card">
+    <div class="logo">
+      <div class="logo-dot"></div>
+      <span class="logo-text">Pulse</span>
+    </div>
+
+    <h1 class="title">Welcome back</h1>
+    <p class="subtitle">Sign in to continue to your workspace</p>
+
+    <div class="input-group">
+      <label class="label">Email</label>
+      <div class="field">
+        <input
+          type="email"
+          class="input"
+          placeholder="you@example.com"
+          [(ngModel)]="email"
+        />
+      </div>
+    </div>
+
+    <div class="input-group">
+      <label class="label">Password</label>
+      <div class="field">
+        <input
+          type="password"
+          class="input"
+          placeholder="Enter password"
+          [(ngModel)]="password"
+        />
+      </div>
+    </div>
+
+    <button class="btn-primary" (click)="signIn()">Sign In</button>
+
+    <a class="forgot-link" href="#">Forgot your password?</a>
+  </div>
+</div>
